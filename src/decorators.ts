@@ -12,7 +12,7 @@ class MensagemSimples implements Mensagem {
 
 // Decorador base (classe abstrata)
 abstract class MensagemDecorator implements Mensagem {
-  constructor(protected componente: Mensagem) {}
+  constructor(protected componente: Mensagem) {} // tem que ser protected para permitir herança nas subclasses
 
   abstract enviar(): string;
 }
